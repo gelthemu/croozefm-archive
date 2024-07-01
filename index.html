@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="91.2 Crooze FM Archive - Great Music. Great Friends."
+    />
+    <meta name="author" content="Gelthem Mucunguzi" />
+
+    <link rel="icon" type="image/x-icon" href="assets/cfm-icon.svg" />
+    <link rel="stylesheet" type="text/css" href="docs/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="docs/css/stream.css" />
+    <link rel="stylesheet" type="text/css" href="docs/css/hightlights.css" />
+    <link rel="stylesheet" type="text/css" href="docs/css/shows.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <title>91.2 Crooze FM Archive</title>
+  </head>
+
+  <body>
+    <main>
+      <section id="navbar" class="navbar">
+        <div class="navbar-logo">
+          <img src="assets/logomarks/cfm-w&r-logo.svg" alt="Crooze FM Logo" />
+        </div>
+        <div class="navbar-menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </section>
+
+      <section id="hero" class="hero"></section>
+
+      <section id="stream-player" class="stream-player">
+        <div id="play-pause" class="play-pause" type="button">
+          <i class="fa-solid fa-circle-play"></i>
+          <audio
+            id="stream-player-audio"
+            type="audio/mpeg"
+            src="http://mp.techsysug.com:21563/;stream"
+          ></audio>
+        </div>
+        <div class="stream-description">
+          <h2>Stream Live Radio Now!</h2>
+          <p>Anywhere, Anytime. Hit Music & Current News Daily...</p>
+          <p id="stream-player-error" class="stream-player-error">
+            Oops!!! This Live Stream is
+            currently&nbsp;<span>unavailable</span>&nbsp;. . .
+          </p>
+        </div>
+      </section>
+
+      <section id="highlights" class="highlights">
+        <div class="highlight-subtitle">
+          <p>
+            <span>91.2 Crooze FM</span> is Western Uganda's Biggest Radio
+            Station. We offer a dynamic blend of music and infotainment. We
+            proudly feature the latest and freshest hits that resonate instantly
+            with our listeners, promising an experience you'll cherish.
+          </p>
+        </div>
+        <div class="highlight-welcome">
+          <div class="highlight-welcome-overlay"></div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section id="shows" class="shows">
+        <h1>Shows In The Spotlight</h1>
+        <div class="shows-wrapper">
+          <div class="show-card">
+            <div class="show morning-addiction"></div>
+            <div class="show-card-content">
+              <p class="show-schedule">Weekdays</p>
+              <p class="show-time">06:00 AM</p>
+            </div>
+            <a href="#"></a>
+          </div>
+          <div class="show-card">
+            <div class="show lifestyle-show"></div>
+            <div class="show-card-content">
+              <p class="show-schedule">Weekdays</p>
+              <p class="show-time">11:00 AM</p>
+            </div>
+          </div>
+          <div class="show-card">
+            <div class="show evening-switch"></div>
+            <div class="show-card-content">
+              <p class="show-schedule">Weekdays</p>
+              <p class="show-time">05:00 PM</p>
+            </div>
+          </div>
+          <div class="show-card">
+            <div class="show hits-selector"></div>
+            <div class="show-card-content">
+              <p class="show-schedule">Weekdays</p>
+              <p class="show-time">08:00 PM</p>
+            </div>
+          </div>
+          <div class="show-card">
+            <div class="show urban-breakfast"></div>
+            <div class="show-card-content">
+              <p class="show-schedule">Weekends</p>
+              <p class="show-time">06:00 AM</p>
+            </div>
+          </div>
+          <div class="show-card">
+            <div class="show big-seat"></div>
+            <div class="show-card-content">
+              <p class="show-schedule">Weekends</p>
+              <p class="show-time">09:00 AM</p>
+            </div>
+          </div>
+        </div>
+        <div class="view-all-shows"><a href="#shows">View All</a></div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section id="presenters"></section>
+
+      <section id="contact"></section>
+    </main>
+
+    <script src="scripts.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px auto;
+  padding: 0 10px;
+  max-width: 1460px;
+}
+
+.navbar-logo img {
+  width: 200px;
+}
+
+.navbar-menu i {
+  padding: 15px 20px;
+  font-size: 30px;
+  color: var(--text-color);
+  background: var(--complementary-color);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.hero {
+  width: 100%;
+  background: url("../../assets/cfm-hero.svg") no-repeat center center / contain;
+  aspect-ratio: 1020 / 300;
+  margin: 30px 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar-logo img {
+    width: 150px;
+  }
+
+  .navbar-menu i {
+    font-size: 25px;
+    padding: 10px 15px;
+  }
+
+  .hero {
+    margin: 15px 0;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .navbar-logo img {
+    width: 120px;
+  }
+
+  .navbar-menu i {
+    font-size: 22px;
+    padding: 8px 12px;
+    border-radius: 10px;
+  }
+
+  .hero {
+    margin: 40px 0;
+  }
+}
+
+@media only screen and (max-width: 432px) {
+  .navbar-logo img {
+    width: 90px;
+  }
+
+  .navbar-menu i {
+    font-size: 16px;
+    padding: 6px 10px;
+    border-radius: 8px;
+  }
+}

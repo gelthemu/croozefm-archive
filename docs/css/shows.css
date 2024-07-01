@@ -1,0 +1,190 @@
+.shows {
+  width: 95%;
+  margin: 100px auto;
+}
+
+.shows h1 {
+  padding-left: 25px;
+  border-left: 10px solid var(--complementary-color);
+  font-size: 50px;
+  font-family: var(--secondary-font);
+  font-variant: small-caps;
+}
+
+.shows-wrapper {
+  margin: 50px auto 20px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  border: 6px solid var(--complementary-color);
+}
+
+.show-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.show-card:hover .show-card-content {
+  background: rgb(40, 40, 40);
+}
+
+.show {
+  position: relative;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  aspect-ratio: 475 / 260;
+}
+
+.show-card-content {
+  padding: 10px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid var(--complementary-color);
+  background: rgba(32, 32, 32, 0.5);
+}
+
+.show-schedule {
+  font-size: 24px;
+  font-variant: small-caps;
+  font-weight: 600;
+}
+
+.show-time {
+  color: var(--secondary-color);
+}
+
+.show-card:hover .show-time {
+  font-weight: 500;
+}
+
+.view-all-shows {
+  font-size: 30px;
+  width: 98%;
+  text-align: right;
+  font-family: var(--secondary-font);
+  font-size: 32px;
+  font-variant: small-caps;
+}
+
+.view-all-shows a {
+  padding-bottom: 10px;
+  border-bottom: 5px solid var(--text-color);
+}
+
+@media only screen and (max-width: 1200px) {
+  .shows {
+    margin: 95px auto 80px;
+  }
+
+  .shows h1 {
+    padding-left: 20px;
+    font-size: 40px;
+  }
+
+  .shows-wrapper {
+    margin: 40px auto 15px;
+    padding: 20px;
+    gap: 25px;
+  }
+
+  .show-card-content {
+    padding: 8px 15px;
+  }
+
+  .show-schedule {
+    font-size: 20px;
+  }
+
+  .show-time {
+    font-size: 14px;
+  }
+
+  .view-all-shows {
+    font-size: 20px;
+  }
+
+  .view-all-shows a {
+    padding-bottom: 8px;
+    border-bottom: 4px solid var(--text-color);
+  }
+}
+
+@media only screen and (max-width: 967px) {
+  .shows {
+    margin: 85px auto 70px;
+  }
+
+  .shows h1 {
+    font-size: 35px;
+    border-left: 8px solid var(--complementary-color);
+  }
+
+  .shows-wrapper {
+    padding: 18px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    border: 5px solid var(--complementary-color);
+  }
+
+  .show-card-content {
+    padding: 6px 12px;
+  }
+
+  .view-all-shows a {
+    border-bottom: 3px solid var(--text-color);
+  }
+}
+
+@media only screen and (max-width: 502px) {
+  .shows {
+    margin: 75px auto 60px;
+  }
+
+  .shows h1 {
+    font-size: 28px;
+    padding-left: 15px;
+    border-left: 5px solid var(--complementary-color);
+  }
+
+  .shows-wrapper {
+    padding: 12px;
+    margin: 30px auto 15px;
+    grid-template-columns: repeat(1, 1fr);
+    border: 4px solid var(--complementary-color);
+  }
+
+  .show-card {
+    gap: 6px;
+  }
+
+  .show-card-content {
+    padding: 4px 10px;
+    border: 2px solid var(--complementary-color);
+  }
+
+  .show-schedule {
+    font-size: 17px;
+  }
+
+  .show-time {
+    font-size: 12px;
+  }
+
+  .view-all-shows {
+    font-size: 17px;
+  }
+
+  .view-all-shows a {
+    padding-bottom: 6px;
+    border-bottom: 3px solid var(--text-color);
+  }
+}

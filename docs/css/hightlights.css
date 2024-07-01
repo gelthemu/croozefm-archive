@@ -1,0 +1,106 @@
+.highlights {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 80%;
+  margin: 150px auto 120px;
+}
+
+.highlight-subtitle,
+.highlight-welcome {
+  flex: 1;
+}
+
+.highlight-subtitle {
+  padding-left: 30px;
+  border-left: 10px solid var(--complementary-color);
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.highlight-subtitle span {
+  color: var(--secondary-color);
+  font-family: var(--secondary-font);
+}
+
+.highlight-welcome {
+  position: relative;
+  width: 100%;
+  background: url("../../assets/home_of_cfm.svg") no-repeat center center /
+    contain;
+  aspect-ratio: 475 / 260;
+}
+
+.highlight-welcome-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 9px solid var(--complementary-color);
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .highlights {
+    gap: 30px;
+    width: 80%;
+    margin: 100px auto 80px;
+  }
+
+  .highlight-subtitle {
+    padding-left: 25px;
+    border-left: 8px solid var(--complementary-color);
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 967px) {
+  .highlights {
+    flex-direction: column;
+    gap: 35px;
+    width: 85%;
+    margin: 70px auto;
+  }
+
+  .highlight-subtitle {
+    padding-left: 0;
+    padding-right: 20px;
+    border-left: none;
+    border-right: 8px solid var(--complementary-color);
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .highlights {
+    margin: 75px auto 60px;
+    gap: 25px;
+  }
+
+  .highlight-subtitle {
+    padding-right: 5px;
+    border-right: 5px solid var(--complementary-color);
+    font-size: 17px;
+  }
+
+  .highlight-welcome-overlay {
+    border: 7px solid var(--complementary-color);
+  }
+}
+
+@media only screen and (max-width: 432px) {
+  .highlights {
+    width: 90%;
+  }
+
+  .highlight-subtitle {
+    font-size: 14px;
+  }
+
+  .highlight-welcome-overlay {
+    border: 5px solid var(--complementary-color);
+  }
+}

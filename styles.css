@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
+@font-face {
+  font-family: "ApexV2";
+  src: url("assets/apex-legends-font/Apex-Black.woff2") format("woff2"),
+    url("assets/apex-legends-font/Apex-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #151515;
+  --complementary-color: #202020;
+  --secondary-color: #ff0000;
+  --text-color: #ffffff;
+
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "ApexV2";
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--primary-font);
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
+main {
+  max-width: 1640px;
+  margin: 0 auto;
+  /* border: 3px solid #ffff00; */
+}
+
+section {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.divider {
+  margin: 10px;
+  border-bottom: 2px solid var(--complementary-color);
+}
