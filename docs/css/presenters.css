@@ -1,0 +1,263 @@
+.presenters {
+    width: 95%;
+    margin: 100px auto;
+  }
+  
+  .presenters-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  
+  .presenters h1 {
+    padding-left: 25px;
+    border-left: 10px solid var(--complementary-color);
+    font-size: 50px;
+    font-family: var(--secondary-font);
+    font-variant: small-caps;
+  }
+  
+  .presenters p {
+    padding-left: 10px;
+    font-size: 28px;
+    font-weight: 400;
+  }
+  
+  .presenter-dj {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 3px solid var(--complementary-color);
+  }
+  
+  .presenter-dj span {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: -3px;
+  }
+  
+  .presenter-dj .filter-btn {
+    color: #606060;
+    cursor: pointer;
+    padding: 0px 20px;
+    border-bottom: 3px solid transparent;
+  }
+  
+  .filter-btn.active {
+    color: #732222;
+    border-bottom: 3px solid #732222;
+  }
+  
+  .presenters-wrapper {
+    margin: 50px auto 20px;
+    padding: 10px 10px 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+    border: 6px solid var(--complementary-color);
+    width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+  }
+  
+  .presenter,
+  .dj {
+    position: relative;
+    flex: 0 0 auto;
+    width: 325px;
+    height: 380px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    border: 3px solid var(--complementary-color);
+  }
+
+  .presenter:hover,
+  .dj:hover {
+    filter: grayscale(1);
+  }
+  
+  .presenter-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    padding: 15px 20px;
+    background: linear-gradient(180deg, transparent, #151515);
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+  }
+  
+  .presenter-title p {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .presenters-wrapper::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .presenters-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .presenters-wrapper::-webkit-scrollbar-thumb {
+    background: var(--text-color);
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .presenters {
+      margin: 95px auto 80px;
+    }
+  
+    .presenters-header {
+      gap: 35px;
+    }
+  
+    .presenters h1 {
+      padding-left: 20px;
+      font-size: 40px;
+    }
+  
+    .presenters p {
+      font-size: 20px;
+    }
+  
+    .presenter-dj span {
+      font-size: 18px;
+    }
+  
+    .presenters-wrapper {
+      margin: 40px auto 15px;
+      padding: 10px 10px 20px;
+      gap: 10px;
+    }
+  
+    .presenter,
+    .dj {
+      width: 266px;
+      height: 310px;
+    }
+  
+    .presenter-title {
+      padding: 13px 18px;
+    }
+  
+    .presenter-title p {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  
+    .presenters-wrapper::-webkit-scrollbar {
+      height: 5px;
+    }
+  }
+  
+  @media only screen and (max-width: 967px) {
+    .presenters {
+      margin: 85px auto 70px;
+    }
+  
+    .presenters-header {
+      gap: 28px;
+    }
+  
+    .presenters h1 {
+      font-size: 35px;
+      border-left: 8px solid var(--complementary-color);
+    }
+  
+    .presenters p {
+      font-size: 18px;
+    }
+  
+    .presenter-dj {
+      gap: 8px;
+    }
+  
+    .presenter-dj span {
+      font-size: 16px;
+    }
+  
+    .presenter-dj .filter-btn {
+      padding: 0px 10px;
+    }
+  
+    .presenters-wrapper {
+      padding: 8px 8px 16px;
+      gap: 8px;
+      border: 5px solid var(--complementary-color);
+    }
+  
+    .presenter,
+    .dj {
+      width: 207px;
+      height: 240px;
+    }
+  
+    .presenter-title {
+      padding: 10px 15px;
+    }
+  
+    .presenter-title p {
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+  
+  @media only screen and (max-width: 502px) {
+    .presenters {
+      margin: 75px auto 60px;
+    }
+  
+    .presenters-header {
+      gap: 25px;
+    }
+  
+    .presenters h1 {
+      font-size: 28px;
+      padding-left: 15px;
+      border-left: 5px solid var(--complementary-color);
+    }
+  
+    .presenters p {
+      font-size: 16px;
+    }
+  
+    .presenter-dj span {
+      font-size: 15px;
+    }
+  
+    .presenters-wrapper {
+      padding: 6px 6px 12px;
+      margin: 30px auto 15px;
+      border: 4px solid var(--complementary-color);
+    }
+  
+    .presenter,
+    .dj {
+      width: 180px;
+      height: 210px;
+    }
+  
+    .presenter-title {
+      padding: 10px;
+    }
+  
+    .presenter-title p {
+      font-size: 13px;
+    }
+  
+    .presenters-wrapper::-webkit-scrollbar {
+      height: 4px;
+    }
+  }

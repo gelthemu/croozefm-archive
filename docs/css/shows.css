@@ -160,6 +160,22 @@
     margin: 30px auto 15px;
     grid-template-columns: repeat(1, 1fr);
     border: 4px solid var(--complementary-color);
+    max-height: 700px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+  }
+
+  .shows-wrapper::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .shows-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .shows-wrapper::-webkit-scrollbar-thumb {
+    background: var(--text-color);
   }
 
   .show-card {
