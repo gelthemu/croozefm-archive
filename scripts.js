@@ -1,31 +1,3 @@
-// stream-live-radio
-document.addEventListener("DOMContentLoaded", function () {
-  const audio = document.getElementById("stream-player-audio");
-  const playPauseBtn = document.getElementById("play-pause");
-  const streamError = document.getElementById("stream-player-error");
-  const playIconClass = "fa-circle-play";
-  const pauseIconClass = "fa-circle-pause";
-
-  playPauseBtn.addEventListener("click", function () {
-    if (audio.paused) {
-      audio
-        .play()
-        .then(() => {
-          streamError.style.display = "none";
-          playPauseBtn.querySelector("i").classList.remove(playIconClass);
-          playPauseBtn.querySelector("i").classList.add(pauseIconClass);
-        })
-        .catch((error) => {
-          streamError.style.display = "flex";
-        });
-    } else {
-      audio.pause();
-      playPauseBtn.querySelector("i").classList.remove(pauseIconClass);
-      playPauseBtn.querySelector("i").classList.add(playIconClass);
-    }
-  });
-});
-
 // showcard-bgImages
 document.addEventListener("DOMContentLoaded", function () {
   const bgImages = {

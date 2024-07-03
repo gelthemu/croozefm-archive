@@ -48,6 +48,52 @@
   text-decoration: line-through;
 }
 
+.current-streaming-shows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 21, 21, 0.98);
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.current-streaming-shows i {
+  font-size: 22px;
+  color: var(--secondary-color);
+}
+
+.current-streaming-show {
+  background: var(--complementary-color);
+  padding: 10px 15px;
+  margin: 0 6px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.current-streaming-show span {
+  opacity: 0.5;
+  display: inline-block;
+  animation: marquee 8s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(35%);
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .stream-player {
     margin: 30px auto;
@@ -64,6 +110,20 @@
 
   .stream-description p {
     font-size: 14px;
+  }
+
+  .current-streaming-shows {
+    gap: 8px;
+  }
+
+  .current-streaming-shows i {
+    font-size: 16px;
+  }
+
+  .current-streaming-show {
+    padding: 8px 12px;
+    font-size: 17px;
+    width: 72.5%;
   }
 }
 
@@ -90,6 +150,10 @@
   .stream-description p {
     font-size: 10px;
   }
+
+  .current-streaming-shows i {
+    font-size: 15px;
+  }
 }
 
 @media only screen and (max-width: 432px) {
@@ -114,5 +178,20 @@
 
   .stream-description p {
     font-size: 8px;
+  }
+
+  .current-streaming-shows {
+    gap: 4px;
+    padding-left: 15px;
+  }
+
+  .current-streaming-shows i {
+    font-size: 14px;
+  }
+
+  .current-streaming-show {
+    border-radius: 5px;
+    padding: 8px 12px;
+    width: 80%;
   }
 }
