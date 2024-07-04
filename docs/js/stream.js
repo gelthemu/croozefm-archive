@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       audio.pause();
       streamError.style.display = "none";
-          currentStreamingShows.style.display = "none";
+      currentStreamingShows.style.display = "none";
       playPauseBtn.querySelector("i").classList.remove(pauseIconClass);
       playPauseBtn.querySelector("i").classList.add(playIconClass);
     }

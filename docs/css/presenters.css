@@ -42,15 +42,15 @@
 }
 
 .presenter-dj .filter-btn {
-  color: #606060;
+  color: rgb(150, 150, 150);
   cursor: pointer;
   padding: 0px 20px;
   border-bottom: 3px solid transparent;
 }
 
 .filter-btn.active {
-  color: #732222;
-  border-bottom: 3px solid #732222;
+  color: #aa0000;
+  border-bottom: 3px solid #aa0000;
 }
 
 .presenters-wrapper {
@@ -77,11 +77,12 @@
   background-position: center center;
   background-size: contain;
   border: 3px solid var(--complementary-color);
+  transition: all 0.25s ease-in-out;
 }
 
 .presenter:hover,
 .dj:hover {
-  filter: grayscale(1);
+  filter: grayscale(0.5);
 }
 
 .presenter-title {
@@ -89,9 +90,9 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50%;
+  height: 60%;
   padding: 15px 20px;
-  background: linear-gradient(180deg, transparent, #151515);
+  background: linear-gradient(180deg, transparent, #101010);
   display: flex;
   justify-content: flex-start;
   align-items: end;
