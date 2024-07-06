@@ -1,26 +1,13 @@
-// api/proxy.js
+const httpProxy = require('http-proxy');
+const url = require('url');
 
-export default async (req, res) => {
-  try {
-    const fetch = await import("node-fetch").then((mod) => mod.default);
+const proxy = httpProxy.createProxyServer();
 
-    const targetUrl = "http://mp.techsysug.com:21563/;stream";
-    const fetchResponse = await fetch(targetUrl);
+export default function handler(req, res) {
+  const targetUrl = 'https://fmradiohub.in/play?url=http://mp.techsysug.com:21563/;stream';
+  const queryString = url.parse(req.url).query;
 
-    // Check if the fetch request was successful
-    if (!fetchResponse.ok) {
-      throw new Error(`HTTP error! Status: ${fetchResponse.status}`);
-    }
-
-    // Forward the response headers to the client
-    const headers = new Headers(fetchResponse.headers);
-    res.writeHead(fetchResponse.status, Object.fromEntries(headers));
-
-    // Stream the response body directly to the client
-    fetchResponse.body.pipe(res);
-  } catch (error) {
-    console.error("Error fetching stream:", error);
-    res.writeHead(500, { "Content-Type": "text/plain" });
-    res.end("Internal Server Error");
-  }
-};
+  proxy.web(req, res, { target: `${targetUrl}&${queryString}`, changeOrigin: true }, (error) => {
+    res.status(500).send('Proxy error');
+  });
+}

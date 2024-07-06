@@ -1,6 +1,6 @@
-# 91.2 Crooze FM Archive
+# 91.2 Crooze FM
 
-Welcome to the **Crooze FM Archive** repository! This project is a clone of the [Crooze FM](https://www.croozefm.com) website, which I'm creating with HTML, CSS, and JavaScript.
+Welcome to my **Crooze FM** repository! This project is a clone of the [Crooze FM](https://www.croozefm.com) website, which I'm creating with HTML, CSS, and JavaScript.
 
 This project aims to replicate the look and feel of the Crooze FM website; and is intended for educational purposes, showcasing web design and development skills using HTML, CSS, and JavaScript.
 
