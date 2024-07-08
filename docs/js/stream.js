@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const streamError = document.getElementById("stream-player-error");
   const playIconClass = "fa-circle-play";
   const pauseIconClass = "fa-circle-pause";
+  const audioSrc = "https://fmradiohub.in/play?url=http://mp.techsysug.com:21563/;stream";
   const currentStreamingShows = document.getElementById(
     "current-streaming-shows"
   );
@@ -105,6 +106,8 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCurrentShow();
     showInterval = setInterval(updateCurrentShow, 2500);
   }
+
+  audio.src = audioSrc;
 
   playPauseBtn.addEventListener("click", function () {
     if (audio.paused) {

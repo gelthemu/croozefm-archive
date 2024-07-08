@@ -1,10 +1,15 @@
 .stream-player {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  left: 0;
   margin: 45px auto;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 25px;
   width: fit-content;
+  width: -moz-fit-content;
 }
 
 .play-pause {
