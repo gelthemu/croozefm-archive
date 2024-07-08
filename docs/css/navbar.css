@@ -27,6 +27,33 @@
   margin: 30px 0;
 }
 
+.last-hero {
+  width: 100%;
+  background: url("../../assets/cfm_footer_img.svg") no-repeat center center /
+    contain;
+  aspect-ratio: 1020 / 300;
+  margin: 30px 0;
+}
+
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 0;
+  z-index: 1000;
+  background: var(--complementary-color);
+  color: var(--text-color);
+  font-size: 20px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#scrollToTopBtn:hover {
+  background-color: var(--primary-color);
+  border: 1px solid rgb(150, 150, 150);
+}
+
 @media only screen and (max-width: 1200px) {
   .navbar-logo img {
     width: 150px;
@@ -37,8 +64,14 @@
     padding: 10px 15px;
   }
 
-  .hero {
+  .hero,
+  .last-hero {
     margin: 15px 0;
+  }
+
+  #scrollToTopBtn {
+    font-size: 16px;
+    padding: 6px;
   }
 }
 
@@ -53,8 +86,14 @@
     border-radius: 10px;
   }
 
-  .hero {
+  .hero,
+  .last-hero {
     margin: 40px 0;
+  }
+
+  #scrollToTopBtn {
+    font-size: 14px;
+    padding: 5px;
   }
 }
 
@@ -67,5 +106,9 @@
     font-size: 16px;
     padding: 6px 10px;
     border-radius: 8px;
+  }
+
+  #scrollToTopBtn {
+    font-size: 12px;
   }
 }
