@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "t-w-s-r-u": "assets/schedule/sports.svg",
     "t-t-c-s": "assets/schedule/country.svg",
     "cfm-s-b": "assets/schedule/classics.svg",
-    enyangyi: "assets/schedule/enyangyi.svg",
+    enyangyi: "assets/schedule/enyangyi.svg"
   };
 
   for (const [className, imagePath] of Object.entries(showScheduleImages)) {

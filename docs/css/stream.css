@@ -36,7 +36,8 @@
   width: 100%;
   height: 100%;
   background-color: rgba(21, 21, 21, 0.96);
-  color: var(--secondary-color);
+  color: rgb(150,150,150);
+  font-weight: 600;
   display: none;
   justify-content: center;
   align-items: center;
@@ -44,7 +45,7 @@
 
 .stream-player-error span {
   display: inline;
-  font-weight: 600;
+  color: var(--secondary-color);
   text-decoration: line-through;
 }
 
