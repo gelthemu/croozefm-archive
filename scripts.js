@@ -17,24 +17,77 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// scrollToTopBtn
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-const scrollToTopIcon = '<i class="fa-solid fa-chevron-up"></i>';
+// navigation
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.getElementById("navbar");
+  const navbarMenu = document.getElementById("navbar-menu");
+  const navbarPills = document.getElementById("navbar-pills");
 
-window.onscroll = function () {
-  if (
-    document.body.scrollTop > 400 ||
-    document.documentElement.scrollTop > 400
-  ) {
-    scrollToTopBtn.style.display = "block";
-    scrollToTopBtn.innerHTML = scrollToTopIcon;
-  } else {
-    scrollToTopBtn.style.display = "none";
-    scrollToTopBtn.innerHTML = "";
-  }
-};
+  navbarMenu.addEventListener("click", function () {
+    navbarPills.classList.toggle("show-nav");
+  });
 
-scrollToTopBtn.onclick = function () {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-};
+  document.addEventListener("click", function (e) {
+    if (!navbarMenu.contains(e.target) && !navbarPills.contains(e.target)) {
+      navbarPills.classList.remove("show-nav");
+    }
+  });
+
+  navbarPills.addEventListener("click", function () {
+    navbarPills.classList.remove("show-nav");
+  });
+});
+
+// on-scroll
+document.addEventListener("DOMContentLoaded", function () {
+  const streamPlayer = document.getElementById("stream-player");
+  const closeStreamPlayer = document.getElementById("close-stream-player");
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  const scrollToTopIcon = '<i class="fa-solid fa-chevron-up"></i>';
+
+  window.onscroll = function () {
+    if (
+      document.body.scrollTop > 400 ||
+      document.documentElement.scrollTop > 400
+    ) {
+      scrollToTopBtn.style.display = "block";
+      scrollToTopBtn.innerHTML = scrollToTopIcon;
+    } else {
+      scrollToTopBtn.style.display = "none";
+      scrollToTopBtn.innerHTML = "";
+    }
+  };
+
+  scrollToTopBtn.onclick = function () {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+
+  let streamPlayerClosed = false;
+  const streamPlayerOffset = streamPlayer.offsetTop;
+
+  window.addEventListener("scroll", function () {
+    if (!streamPlayerClosed && window.scrollY >= streamPlayerOffset) {
+      streamPlayer.classList.add("stream-player-fixed");
+      closeStreamPlayer.style.display = "block";
+    } else {
+      streamPlayer.classList.remove("stream-player-fixed");
+      closeStreamPlayer.style.display = "none";
+    }
+  });
+
+  closeStreamPlayer.addEventListener("click", function () {
+    streamPlayer.classList.remove("stream-player-fixed");
+    closeStreamPlayer.style.display = "none";
+    streamPlayerClosed = true;
+  });
+
+  window.onscroll = function () {
+    if (
+      document.body.scrollTop === 0 &&
+      document.documentElement.scrollTop === 0
+    ) {
+      streamPlayerClosed = false;
+    }
+  };
+});

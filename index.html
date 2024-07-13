@@ -10,8 +10,8 @@
     />
     <meta name="author" content="Gelthem Mucunguzi" />
 
-    <link rel="icon" type="image/x-icon" href="assets/cfm-icon.svg" />
-    <link rel="stylesheet" type="text/css" href="docs/css/navbar.css" />
+    <link rel="icon" type="image/x-icon" href="assets/icons/cfm-icon.svg" />
+    <link rel="stylesheet" type="text/css" href="docs/css/otherstyles.css" />
     <link rel="stylesheet" type="text/css" href="docs/css/stream.css" />
     <link rel="stylesheet" type="text/css" href="docs/css/hightlights.css" />
     <link rel="stylesheet" type="text/css" href="docs/css/shows.css" />
@@ -22,6 +22,9 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
 
     <title>91.2 Crooze FM - Great Music. Great Friends.</title>
+
+    <script src="docs/js/stream.js" type="text/javascript"></script>
+    <script src="scripts.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -30,38 +33,106 @@
         <div class="navbar-logo">
           <img src="assets/logomarks/cfm-w&r-logo.svg" alt="Crooze FM Logo" />
         </div>
-        <div class="navbar-menu">
+
+        <div class="navbar-pills" id="navbar-pills">
+          <a href="javascript:void(0)" class="nav-pill">News</a>
+          <a href="#shows" class="nav-pill">Shows</a>
+          <a href="#schedule" class="nav-pill">Schedule</a>
+          <a href="javascript:void(0)" class="nav-pill">Gallery</a>
+        </div>
+
+        <div class="navbar-menu" id="navbar-menu">
           <i class="fa-solid fa-bars"></i>
         </div>
       </section>
 
       <section id="hero" class="hero"></section>
 
-      <section id="stream-player" class="stream-player">
-        <div id="play-pause" class="play-pause" type="button">
-          <i class="fa-solid fa-circle-play"></i>
-          <audio
-            id="stream-player-audio"
-            type="audio/mpeg"
-            crossorigin="anonymous"
-          >91.2 Crooze FM</audio>
-        </div>
+      <section id="stream-n-contact-wrapper" class="stream-n-contact-wrapper">
+        <div id="stream-player" class="stream-player">
+          <div class="stream-player-seek-bar">
+            <div id="play-pause" class="play-pause" type="button">
+              <i class="fa-solid fa-play"></i>
+              <audio
+                id="stream-player-audio"
+                src="https://fmradiohub.in/play?url=http://mp.techsysug.com:21563/;stream"
+                type="audio/mpeg"
+                crossorigin="anonymous"
+              >
+                91.2 Crooze FM
+              </audio>
+            </div>
 
-        <div class="stream-description">
-          <h2>Stream Live Radio Now!</h2>
-          <p>Anywhere, Anytime. Hit Music & Current News Daily...</p>
-          <p id="stream-player-error" class="stream-player-error">
-            Oops!!! This Live Stream is
-            currently&nbsp;<span>unavailable</span>&nbsp;. . .
-          </p>
+            <div class="stream-description">
+              <h2
+                id="stream-description-title"
+                class="stream-description-title"
+              >
+                Listen to Crooze Fm now!
+              </h2>
+              <p id="stream-description-text" class="stream-description-text">
+                Anytime, Anywhere.
+              </p>
+              <div id="stream-player-error" class="stream-player-error">
+                <p class="stream-description-text">
+                  Oops!!!&nbsp;<span>We Are Offline</span>&nbsp;. . .
+                </p>
+              </div>
+            </div>
+
+            <div id="close-stream-player" class="close-stream-player">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+
           <div class="current-streaming-shows" id="current-streaming-shows">
             <i
               class="fa-regular fa-circle-dot fa-beat"
               style="--fa-animation-duration: 0.5s"
-              title="Live Radio"
             ></i>
-            <p class="current-streaming-show">
-              <span id="current-streaming-show"></span>
+            <p class="current-streaming-show-details">
+              On NOW: &nbsp;<span
+                class="current-streaming-show"
+                id="current-streaming-show"
+              ></span>
+            </p>
+          </div>
+        </div>
+
+        <div class="cfm-contact-details">
+          <div class="cfm-studio-lines">
+            <p>
+              Call us: &nbsp;<a
+                class="cfm-studio-line"
+                href="tel:+256752912912"
+                target="_blank"
+                >0752 912912</a
+              >&nbsp;or&nbsp;<a
+                class="cfm-studio-line"
+                href="tel:+256780912910"
+                target="_blank"
+                >0780 912910</a
+              >
+            </p>
+          </div>
+
+          <div class="cfm-social-media">
+            <p>
+              <a
+                class="cfm-social-media-link cfm-facebook-link"
+                href="https://facebook.com/91.2croozefm"
+                target="_blank"
+              ></a
+              >&nbsp;<a
+                class="cfm-social-media-link cfm-x-link"
+                href="https://x.com/912CroozeFM"
+                target="_blank"
+              ></a
+              >&nbsp;<a
+                class="cfm-social-media-link cfm-instagram-link"
+                href="https://instagram.com/91.2croozefm"
+                target="_blank"
+              ></a>
             </p>
           </div>
         </div>
@@ -81,9 +152,9 @@
         </div>
       </section>
 
-      <div class="divider"></div>
+      <div class="divider" id="shows"></div>
 
-      <section id="shows" class="shows">
+      <section class="shows">
         <h1>Shows In The Spotlight</h1>
         <div class="shows-wrapper">
           <div class="show-card">
@@ -92,8 +163,8 @@
               <p class="show-schedule">Weekdays</p>
               <p class="show-time">06:00 AM</p>
             </div>
-            <a href="#"></a>
           </div>
+
           <div class="show-card">
             <div class="show lifestyle-show"></div>
             <div class="show-card-content">
@@ -101,6 +172,7 @@
               <p class="show-time">11:00 AM</p>
             </div>
           </div>
+
           <div class="show-card">
             <div class="show evening-switch"></div>
             <div class="show-card-content">
@@ -108,6 +180,7 @@
               <p class="show-time">05:00 PM</p>
             </div>
           </div>
+
           <div class="show-card">
             <div class="show hits-selector"></div>
             <div class="show-card-content">
@@ -115,6 +188,7 @@
               <p class="show-time">08:00 PM</p>
             </div>
           </div>
+
           <div class="show-card">
             <div class="show urban-breakfast"></div>
             <div class="show-card-content">
@@ -122,6 +196,7 @@
               <p class="show-time">06:00 AM</p>
             </div>
           </div>
+
           <div class="show-card">
             <div class="show big-seat"></div>
             <div class="show-card-content">
@@ -130,12 +205,12 @@
             </div>
           </div>
         </div>
-        <div class="view-all-shows"><a href="#shows">View All</a></div>
+        <div class="view-all-shows"><a href="javascript:void(0)">View All</a></div>
       </section>
 
-      <div class="divider"></div>
+      <div class="divider" id="presenters"></div>
 
-      <section id="presenters" class="presenters">
+      <section class="presenters">
         <div class="presenters-header">
           <h1>Meet Our Team</h1>
           <p>
@@ -286,9 +361,9 @@
         </div>
       </section>
 
-      <div class="divider"></div>
+      <div class="divider" id="schedule"></div>
 
-      <section class="schedule" id="schedule">
+      <section class="schedule">
         <h1>Signature Lineup</h1>
         <div class="schedule-wrapper">
           <div class="schedule-header">
@@ -708,7 +783,7 @@
             <p>Thank you for doing this!</p>
             <p>
               <a
-                href="javascript:void(0)"
+                href="https://youtube.com/@croozetv-madetoentertain8796/streams"
                 target="_blank"
                 class="mailing-list-yt-sub"
                 >Subscribe to our YouTube Channel</a
@@ -752,20 +827,20 @@
           <div class="footer-links">
             <div class="footer-links-resourceful">
               <p class="footer-links-header">Resourceful Links</p>
-              <p><a href="javascript:void(0)">Shows</a></p>
-              <p><a href="javascript:void(0)">Presenters</a></p>
-              <p><a href="javascript:void(0)">Promotions</a></p>
+              <p><a href="#shows">Shows</a></p>
+              <p><a href="#presenters">Presenters</a></p>
+              <p><a href="#updates">Updates</a></p>
               <p><a href="javascript:void(0)">Gallery</a></p>
             </div>
             <div class="footer-links-contact-us">
               <p class="footer-links-header">Contact Us</p>
               <p>
-                <a href="javascript:void(0)" target="_blank"
+                <a href="tel:+256706912912" target="_blank"
                   >+256 706 912912<span class="admin-line">(admin)</span></a
                 >
               </p>
               <p>
-                <a href="javascript:void(0)" target="_blank"
+                <a href="mailto:info@croozefm.com" target="_blank"
                   >info@croozefm.com</a
                 >
               </p>
@@ -784,10 +859,8 @@
       <button id="scrollToTopBtn"></button>
     </main>
 
-    <script src="docs/js/stream.js" type="text/javascript"></script>
     <script src="docs/js/presenters.js" type="text/javascript"></script>
     <script src="docs/js/schedule.js" type="text/javascript"></script>
     <script src="docs/js/mailing-list.js" type="text/javascript"></script>
-    <script src="scripts.js" type="text/javascript"></script>
   </body>
 </html>
