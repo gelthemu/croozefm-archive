@@ -85,6 +85,11 @@
   font-size: 32px;
 }
 
+.cfm-social-media {
+  display: flex;
+  gap: 6px;
+}
+
 .cfm-studio-line {
   font-weight: 600;
 }
@@ -150,7 +155,7 @@
 
   .cfm-studio-lines,
   .cfm-social-media {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -189,7 +194,15 @@
 
   .cfm-studio-lines,
   .cfm-social-media {
-    font-size: 20px;
+    font-size: 19px;
+  }
+
+  .cfm-social-media {
+    gap: 5px;
+  }
+
+  .cfm-social-media-link {
+    padding: 14px;
   }
 }
 
@@ -202,6 +215,15 @@
   .cfm-contact-details {
     width: 80%;
     justify-content: space-around;
+  }
+
+  .cfm-studio-lines,
+  .cfm-social-media {
+    font-size: 16px;
+  }
+
+  .cfm-social-media {
+    gap: 4px;
   }
 
   .cfm-social-media-link {
@@ -255,9 +277,8 @@
     width: 100%;
   }
 
-  .cfm-studio-lines,
-  .cfm-social-media {
-    font-size: 18px;
+  .cfm-social-media-link {
+    padding: 10px;
   }
 
   .last-hero {
@@ -292,11 +313,15 @@
 
   .cfm-studio-lines,
   .cfm-social-media {
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  .cfm-social-media {
+    gap: 4px;
   }
 
   .cfm-social-media-link {
-    padding: 10px;
+    padding: 8px;
   }
 }
 
@@ -318,7 +343,7 @@
 
   .cfm-studio-lines,
   .cfm-social-media {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -343,11 +368,6 @@
 }
 
 @media only screen and (max-width: 364px) {
-  .cfm-studio-lines,
-  .cfm-social-media {
-    font-size: 12px;
-  }
-
   .cfm-contact-details {
     gap: 18px;
   }
