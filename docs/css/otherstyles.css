@@ -64,7 +64,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 0;
-  margin: 40px auto;
+  margin: 70px auto;
 }
 
 .cfm-contact-details {
@@ -145,7 +145,7 @@
 
 @media only screen and (max-width: 1280px) {
   .stream-n-contact-wrapper {
-    margin: 10px auto;
+    margin: 60px auto;
   }
 
   .cfm-studio-lines,
@@ -197,7 +197,6 @@
   .stream-n-contact-wrapper {
     flex-direction: column;
     gap: 30px;
-    margin: 15px auto;
   }
 
   .cfm-contact-details {
@@ -283,7 +282,7 @@
 
 @media only screen and (max-width: 520px) {
   .stream-n-contact-wrapper {
-    margin: 20px auto;
+    margin: 60px auto;
   }
 
   .cfm-contact-details {
@@ -313,6 +312,7 @@
 
 @media only screen and (max-width: 450px) {
   .stream-n-contact-wrapper {
+    margin: 50px auto;
     gap: 20px;
   }
 
