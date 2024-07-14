@@ -91,3 +91,31 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 });
+
+// update-status-download
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("update-status-download")
+    .addEventListener("click", async () => {
+      const zip = new JSZip();
+      const imageUrls = [
+        "https://i.ibb.co/PzQ0pTM/cfm-bwino-flyer.jpg",
+        "https://pbs.twimg.com/media/GSRvFgCWYAA2gKm?format=jpg&name=4096x4096",
+        "https://pbs.twimg.com/media/GSRvFgEXgAADYvh?format=jpg&name=4096x4096",
+        "https://pbs.twimg.com/media/GSRvFjdXYAAWvLw?format=jpg&name=4096x4096",
+        "https://pbs.twimg.com/media/GSRvFgEXgAEznmt?format=jpg&name=4096x4096",
+        "https://pbs.twimg.com/media/GSRvK07aEAA-BOI?format=jpg&name=4096x4096",
+      ];
+
+      for (let i = 0; i < imageUrls.length; i++) {
+        const url = imageUrls[i];
+        const response = await fetch(url);
+        const blob = await response.blob();
+        zip.file(`kafulu_wa_bwino${i + 1}.jpg`, blob);
+      }
+
+      zip.generateAsync({ type: "blob" }).then((content) => {
+        saveAs(content, "kafulu_wa_bwino_season_ii.zip");
+      });
+    });
+});

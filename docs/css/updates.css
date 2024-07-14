@@ -56,12 +56,35 @@
 .update-reel {
   flex: 0 0 auto;
   width: 300px;
-  background-image: url("https://pbs.twimg.com/media/GSRvFgCWYAA2gKm?format=jpg&name=4096x4096");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
   aspect-ratio: 330 / 467;
   border: 3px solid var(--complementary-color);
+}
+
+.update-reel-1 {
+  background-image: url("../../assets/cfm-bwino-flyer.svg");
+}
+
+.update-reel-2  {
+  background-image: url("https://pbs.twimg.com/media/GSRvFgCWYAA2gKm?format=jpg&name=4096x4096");
+}
+
+.update-reel-3  {
+  background-image: url("https://pbs.twimg.com/media/GSRvFgEXgAADYvh?format=jpg&name=4096x4096");
+}
+
+.update-reel-4  {
+  background-image: url("https://pbs.twimg.com/media/GSRvFjdXYAAWvLw?format=jpg&name=4096x4096");
+}
+
+.update-reel-5  {
+  background-image: url("https://pbs.twimg.com/media/GSRvFgEXgAEznmt?format=jpg&name=4096x4096");
+}
+
+.update-reel-6  {
+  background-image: url("https://pbs.twimg.com/media/GSRvK07aEAA-BOI?format=jpg&name=4096x4096");
 }
 
 .updates-reels::-webkit-scrollbar {
