@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   gap: 60px;
-  margin: 150px auto 50px;
+  margin: 10px auto 50px;
 }
 
 .footer-location {
@@ -146,7 +146,7 @@
   position: relative;
   width: 100%;
   grid-column: 3 / 5;
-  background: url("../../assets/cfm_studios.svg") no-repeat center center / contain;
+  background: url("../../assets/cfm_studios-footer.svg") no-repeat center center / contain;
   aspect-ratio: 818 / 265;
 }
 
@@ -169,7 +169,7 @@
 
 @media only screen and (max-width: 1200px) {
   .footer .footer-wrapper {
-    margin: 90px auto 40px;
+    margin: 0 auto 35px;
     gap: 40px;
   }
 
@@ -231,7 +231,7 @@
 
 @media only screen and (max-width: 967px) {
   .footer .footer-wrapper {
-    margin: 70px auto 25px;
+    margin: 0 auto 25px;
   }
   
   .footer-location {
@@ -360,7 +360,7 @@
 
 @media only screen and (max-width: 438px) {
   .footer .footer-wrapper {
-    margin: 50px auto 15px;
+    margin: 15px auto 20px;
   } 
 
   .footer-location-map {

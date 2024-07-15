@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const day = ugandaTime.getDay();
 
     const regularSchedule = [
+      { name: "The Inspiration", start: 5, end: 6 },
       { name: "The Morning Addiction", start: 6, end: 10 },
       { name: "The Coffee Break", start: 10, end: 11 },
       { name: "The LifeStyle", start: 11, end: 14 },
@@ -49,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const fridaySchedule = [
+      { name: "The Inspiration", start: 5, end: 6 },
       { name: "#TGIF - The Morning Addiction", start: 6, end: 10 },
       { name: "#TGIF - The Coffee Break", start: 10, end: 11 },
       { name: "#TGIF - The LifeStyle", start: 11, end: 14 },
@@ -58,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const saturdaySchedule = [
+      { name: "The Inspiration", start: 5, end: 6 },
       { name: "The Urban Breakfast", start: 6, end: 9 },
       { name: "The BIG Seat", start: 9, end: 11 },
       { name: "The Whatsup Show", start: 11, end: 12 },
@@ -67,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const sundaySchedule = [
+      { name: "The Inspiration", start: 5, end: 6 },
       { name: "The Sunday Inspiration", start: 6, end: 9 },
       { name: "CFM Sunday Love", start: 9, end: 12 },
       { name: "ENYANGYI", start: 12, end: 14 },
