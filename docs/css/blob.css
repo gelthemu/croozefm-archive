@@ -153,7 +153,7 @@ gap: 20px;
 .gallery-cover {
   position: relative;
   width: 60%;
-  background: url("../assets/cfm-gallery-cover.svg") no-repeat center center /
+  background: url("../../assets/cfm-gallery-cover.svg") no-repeat center center /
     contain;
   aspect-ratio: 1780 / 440;
   padding: 0;
