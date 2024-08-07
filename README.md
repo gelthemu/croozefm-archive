@@ -1,4 +1,4 @@
-# 91.2 Crooze FM
+<img src="assets/logomarks/cfm-w&r-logo.svg" alt="91.2 Crooze FM" width="240"/>
 
 Welcome to my **Crooze FM** repository! This project is a clone of the [Crooze FM](https://www.croozefm.com) website, which I'm creating with HTML, CSS, and JavaScript.
 
